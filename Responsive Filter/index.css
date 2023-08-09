@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buttons {
+    width: 30%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.sports-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sports-list li {
+    list-style: none;
+    overflow: hidden;
+    margin: 15px;
+   
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background:  rgb(230, 200, 161);
+    max-width: 400px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  }
+  .popup.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+  }
+  .popup .Head{
+    padding: 13px 15px 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Head .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .Head .title p{
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  .Head .bi{
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .popup .pop-image{
+    width: 100%;
+    display: flex;
+  }
+
+  .popup img:hover{
+    transform: scale(1);
+  }
+  .pop-image img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+  .close{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.4);
+  }
+  .close.show{
+    display: block;
+  }
+
+  .btn-outline-warning {
+    color:rgb(245, 69, 69);
+    border-color: rgb(83, 3, 3);
+}
